@@ -1,0 +1,53 @@
+#introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  position: relative;
+}
+
+#introContainer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--content-bg-color);
+  border-radius: 30px;
+  box-shadow: 0px 5px 50px var(--default-shadow-color);
+
+  mix-blend-mode: var(--content-bg-blend-mode);
+  z-index: -1;
+}
+
+#introWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.regularIntroText {
+  font-family: var(--main-font-fam);
+  font-weight: bold;
+  font-size: 127px;
+}
+
+#introContainer__regular {
+  background: var(--text-color-content);
+  background-clip: text;
+  line-height: 1;
+  color: transparent;
+}
+
+#introContainer__regular_appname {
+  background: var(--text-color-special);
+  mix-blend-mode: var(--text-blend-mode-special);
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
+.introButton {
+  font-size: 60px;
+}

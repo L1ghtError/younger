@@ -1,0 +1,29 @@
+#root {
+  --header-height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0px;
+}
+
+#appBackground {
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+
+  position: fixed;
+  filter: blur(3px);
+
+  /* Add a dark overlay to make it 40% darker */
+  background: var(--bg-filter-params), /* 20% dark overlay */ url('./assets/back_rainboo.gif');
+  background-blend-mode: overlay;
+
+  /* Remove left and right borders*/
+  background-size: 102%;
+  background-repeat: repeat-y;
+  background-position: center;
+
+  z-index: -10;
+}
