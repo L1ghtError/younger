@@ -14,7 +14,11 @@ function IntroContainer() {
           Younger
         </h1>
       </div>
-      <ControlButton className='introButton' btnDesc="Create account"></ControlButton>
+      <ControlButton
+        className="introButton"
+        btnDesc="Create account"
+        btnIcon={''}
+        onClick={()=>{}}></ControlButton>
       <p>30 Days free trial | No credit required</p>
     </div>
   );

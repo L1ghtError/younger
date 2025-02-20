@@ -1,7 +1,14 @@
 import './controlButtonStyles.css';
-import PropTypes from 'prop-types';
+
+interface ControlButtonProps {
+  btnIcon: string;
+  btnDesc: string;
+  className: string;
+  onClick: (event: React.MouseEvent<HTMLElement>) => void
+}
+
 // TODO: extent porps, to simulate <a></a> behavior
-function ControlButton({ btnIcon, btnDesc, className = '', onClick = () => {} }) {
+function ControlButton({ btnIcon, btnDesc, className = '', onClick = () => {} }:ControlButtonProps ) {
   return (
     <button className={`${className} controlButton`} onClick={onClick}>
       {btnIcon && <img draggable="false" src={btnIcon} alt="" className="btnIcon" />}
@@ -9,12 +16,5 @@ function ControlButton({ btnIcon, btnDesc, className = '', onClick = () => {} })
     </button>
   );
 }
-
-ControlButton.propTypes = {
-  btnIcon: PropTypes.string.isRequired,
-  btnDesc: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  onClick: PropTypes.func
-};
 
 export default ControlButton;
